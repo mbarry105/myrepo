@@ -2,13 +2,7 @@
 
 ### Cleaning workspace and loading packages ####
 rm(list = ls())
-
-# If tidyverse works for you, use:
-# library(tidyverse)
-
-# If tidyverse is broken, use the two you actually need:
-library(dplyr)
-library(ggplot2)
+ library(tidyverse)
 
 ### Reading in data ####
 # Read in the dataframe and call it fastfoodData.
@@ -17,9 +11,8 @@ fastfoodData <- read.csv("hw03/datasets/fastfood.csv", stringsAsFactors = TRUE)
 # Take a quick look at the data
 summary(fastfoodData)
 
-### filter(), or subsetting observations ####
 
-# Create a smaller dataframe named mcdonaldsData that only includes Mcdonalds
+# Creating a smaller dataframe named mcdonaldsData that only includes Mcdonalds
 mcdonaldsData <- fastfoodData %>%
   filter(restaurant == "Mcdonalds")
 
